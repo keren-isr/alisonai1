@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keren Israeli | Marketing & Growth Executive | Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+            color: #073B4C;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 2.5rem; 
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 9999px;
+            background-color: #118AB2;
+            border: 4px solid #F8F9FA;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 1.75rem;
+            width: 2px;
+            height: calc(100% - 1.5rem);
+            background-color: #E5E7EB;
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <main class="container mx-auto p-4 md:p-8 max-w-7xl">
+        
+        <header class="text-center py-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#073B4C]">Keren Israeli</h1>
+            <p class="mt-4 text-xl md:text-2xl font-medium text-[#118AB2]">A Visual Resume for the Marketing Manager Role at Alison.ai</p>
+            <p class="mt-6 max-w-3xl mx-auto text-lg text-slate-600">
+                A hands-on, results-oriented marketing leader with a proven record of leveraging data to drive growth, execute multi-channel campaigns, and build powerful brands in the tech sector.
+            </p>
+        </header>
+
+        <section id="key-metrics" class="py-10">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#073B4C]">A Career of Measurable Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="kpi-card text-center md:col-span-2 lg:col-span-1">
+                    <p class="text-8xl font-extrabold text-[#FF6B6B]">250%</p>
+                    <p class="mt-2 text-xl font-bold">B2B Sales Growth</p>
+                    <p class="mt-2 text-slate-600">Driven by data-informed organic SMO strategies at KTE Media, showcasing expertise in targeted B2B demand generation.</p>
+                </div>
+
+                <div class="kpi-card text-center">
+                    <p class="text-8xl font-extrabold text-[#FFD166]">100K</p>
+                    <p class="mt-2 text-xl font-bold">App Downloads</p>
+                    <p class="mt-2 text-slate-600">Achieved within 6 months of a global launch, demonstrating effective GTM strategy and execution.</p>
+                </div>
+
+                <div class="kpi-card text-center">
+                    <p class="text-8xl font-extrabold text-[#06D6A0]">50K</p>
+                    <p class="mt-2 text-xl font-bold">New Users</p>
+                    <p class="mt-2 text-slate-600">Acquired for a new AI product in just 6 months, highlighting proficiency in product marketing and user adoption.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="data-driven-strategy" class="py-10">
+             <h2 class="text-3xl font-bold text-center mb-12 text-[#073B4C]">Data-Driven & Multi-Channel Expertise</h2>
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="kpi-card">
+                    <h3 class="text-2xl font-bold mb-4 text-[#118AB2]">AI-Powered User Engagement</h3>
+                    <p class="mb-4 text-slate-600">At Feminist Toys Media, data wasn't just tracked; it powered a personalized AI experience. This led to a significant increase in both user base and sales, demonstrating a deep understanding of how to leverage tech for marketing success.</p>
+                    <div class="chart-container h-80">
+                        <canvas id="userGrowthChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <h3 class="text-2xl font-bold mb-4 text-[#118AB2]">Client Revenue & Retention</h3>
+                    <p class="mb-4 text-slate-600">Success is measured by client outcomes. Through strategic consulting, I drove an average 200% revenue increase for clients. My founder experience also underscores the importance of retention, achieving a 35% rate in a competitive space.</p>
+                    <div class="h-80 flex items-center justify-center">
+                        <div class="grid grid-cols-2 gap-4 text-center w-full">
+                         <div>
+                            <div class="chart-container !h-48 !max-w-[200px]">
+                                 <canvas id="retentionDonutChart"></canvas>
+                            </div>
+                            <p class="mt-2 font-bold">35% Member Retention</p>
+                         </div>
+                         <div>
+                            <div class="chart-container !h-48 !max-w-[200px]">
+                                 <p class="text-6xl font-extrabold text-[#06D6A0] pt-10">+200%</p>
+                            </div>
+                            <p class="mt-2 font-bold">Client Revenue Growth</p>
+                         </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <section id="timeline" class="py-10">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#073B4C]">A Timeline of Strategic Leadership</h2>
+            <div class="max-w-3xl mx-auto">
+                 <div class="timeline-item">
+                    <h3 class="text-xl font-bold text-[#073B4C]">Founder, Feminist Toys Media <span class="text-base font-normal text-slate-500 ml-2">2019-Present</span></h3>
+                    <p class="mt-1 text-slate-600">Led product strategy for a Personalized Pleasure AI. Drove 19% annual sales increase and grew user base to 50K+. Directly relevant to Alison.ai's AI-focused market.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-bold text-[#073B4C]">CEO & Co-Founder, Penny Royalty Ltd <span class="text-base font-normal text-slate-500 ml-2">2016-2019</span></h3>
+                    <p class="mt-1 text-slate-600">Managed FinTech product launches and recruited executive teams, demonstrating leadership in a fast-paced startup environment.</p>
+                </div>
+                 <div class="timeline-item">
+                    <h3 class="text-xl font-bold text-[#073B4C]">CMO, CEO & Co-Founder, KTE Media Ltd <span class="text-base font-normal text-slate-500 ml-2">2014-2016</span></h3>
+                    <p class="mt-1 text-slate-600">Architected brand and GTM strategy, achieving 100K downloads and 250% B2B sales growth. Proves ability to execute high-impact, multi-channel campaigns.</p>
+                </div>
+                 <div class="timeline-item">
+                    <h3 class="text-xl font-bold text-[#073B4C]">Director, TELL WHEN: WEB <span class="text-base font-normal text-slate-500 ml-2">2012-Present</span></h3>
+                    <p class="mt-1 text-slate-600">Consulted for major brands, orchestrating market entry and demand generation strategies that increased client revenue by an average of 200%.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-10">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#073B4C] flex justify-center items-center">
+                <img src="Alison-logo.png" alt="Icon" class="h-9 w-9 mr-4">
+                <span>Powering Growth at Alison.ai</span>
+            </h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-600">
+                <div>
+                    <h3 class="flex items-center text-xl font-bold text-[#118AB2] mb-3">
+                        <span class="text-2xl mr-3">📈</span> Multi-Channel Campaign Execution
+                    </h3>
+                    <p>Proven ability to drive brand awareness and demand generation across content, digital (SMO), PR, and events, leading to triple-digit growth in sales and user acquisition.</p>
+                </div>
+                <div>
+                    <h3 class="flex items-center text-xl font-bold text-[#118AB2] mb-3">
+                        <span class="text-2xl mr-3">📊</span> Data-Driven & Analytical Mindset
+                    </h3>
+                    <p>Extensive experience defining KPIs, designing A/B tests, and translating marketing data into actionable insights to optimize performance and guide strategy.</p>
+                </div>
+                <div>
+                    <h3 class="flex items-center text-xl font-bold text-[#118AB2] mb-3">
+                        <span class="text-2xl mr-3">🚀</span> GTM & Product Marketing
+                    </h3>
+                    <p>Expertise in architecting and executing comprehensive go-to-market strategies for new products, including AI and SaaS platforms, ensuring successful market entry and adoption.</p>
+                </div>
+                <div>
+                    <h3 class="flex items-center text-xl font-bold text-[#118AB2] mb-3">
+                        <span class="text-2xl mr-3">🤝</span> Cross-Functional Collaboration
+                    </h3>
+                    <p>A history of founding companies and leading executive teams demonstrates a natural ability to collaborate closely with Product, Sales, and Success to achieve shared goals.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const tooltipTitleCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            const wrapLabel = (label) => {
+                const maxLen = 16;
+                if (label.length <= maxLen) return label;
+                
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxLen) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+
+            const userGrowthCtx = document.getElementById('userGrowthChart').getContext('2d');
+            new Chart(userGrowthCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Launch', 'Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 5', 'Month 6'],
+                    datasets: [{
+                        label: 'User Growth (to 50K)',
+                        data: [0, 5000, 12000, 25000, 35000, 42000, 50000],
+                        borderColor: '#06D6A0',
+                        backgroundColor: 'rgba(6, 214, 160, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Sales Growth (19% Avg Annual)',
+                        data: [100, 103, 106, 109, 112, 115, 119],
+                        borderColor: '#FFD166',
+                        backgroundColor: 'rgba(255, 209, 102, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    ...tooltipTitleCallback
+                }
+            });
+
+            const retentionDonutCtx = document.getElementById('retentionDonutChart').getContext('2d');
+            new Chart(retentionDonutCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Retained Members', 'Non-Retained'],
+                    datasets: [{
+                        label: 'Member Retention',
+                        data: [35, 65],
+                        backgroundColor: [
+                            '#118AB2',
+                            '#E5E7EB'
+                        ],
+                        borderColor: '#ffffff',
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(tooltipItems) {
+                                    const item = tooltipItems[0];
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    if (Array.isArray(label)) {
+                                      return label.join(' ');
+                                    } else {
+                                      return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>
